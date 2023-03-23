@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+body {
+  font-family: Arial;
+  background-color: black;
+  color: white;
+
+}
+
+  h1,p {
+  text-align: center;
+  padding: 2rem;
+  color: white;
+}
+
+.tab {
+  display: flex;
+  justify-content: center;
+}
+
+/* Style the tab */
+.tab {
+  overflow: hidden;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+  background-color: black;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+
+
+  .tab button.active {
+  background-color: black;
+  color: white;
+  border-bottom: 3px solid white;
+}
+  
+
+
+/* Style the tab content */
+.tabcontent {
+  display: none;
+  padding: 6px 12px;
+  -webkit-animation: fadeEffect 1s;
+  animation: fadeEffect 1s;
+}
+
+/* Fade in tabs */
+@-webkit-keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes fadeEffect {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+  
+  
+  .grid-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid-item {
+  width: 30%;
+  height: 320px;
+  margin: 10px;
+  background-color: #ddd;
+}
+  
+  .grid-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+@media (max-width: 768px) {
+  .grid-item {
+    width: 45%;
+  }
+
+
+@media (max-width: 480px) {
+  .grid-item {
+    width: 90%;
+  }
+
+  /*
+  .instagram-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}*/
+
+/*.instagram-icon i {
+  font-size: 1rem;
+  color: white;
+}
+  */
+  
+</style>
+</head>
+<body>
+
+<h1>nenkanuska</h1>
+
+<div class="tab">
+  <button class="tablinks" onclick="openArt(event, 'All')">All</button>
+  <button class="tablinks" onclick="openArt(event, 'Canvas')">Canvas</button>
+  <button class="tablinks" onclick="openArt(event, 'Lines')">Lines</button>
+  <button class="tablinks" onclick="openArt(event, 'Digital')">Digital</button>
+  <!--<button class="tablinks"><div class="instagram-icon"><a href="https://instagram.com/nenkanuska"><i class="fab fa-instagram"></i></a></div></button>*/
+  <!--<button class="tablinks" onclick="openArt(event, 'Lingerie')">Photography</button>--->
+</div>
+
+<div id="All" class="tabcontent">
+  <div class="grid-container">
+  <div class="grid-item">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNAVoGrfVb0MbqXeSmD-fC7DrLU7EMY5eCYGDm06fX&s"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+</div>
+</div>
+
+<div id="Canvas" class="tabcontent">
+  <p>Acrylics</p>
+   <div class="grid-container">
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+  <div class="grid-item"></div>
+</div>
+  </div>
+
+<div id="Lines" class="tabcontent">
+  <p>Different line experiments</p>
+   <div class="grid-container">
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+  </div>
+</div>
+  
+<div id="Digital" class="tabcontent">
+  <p>Trying different colors</p>
+  <div class="grid-container">
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+  </div>
+</div>
+  
+<div id="Lingerie" class="tabcontent">
+  <p>Tokyo is the capital of Japan.</p>
+  <div class="grid-container">
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+    <div class="grid-item"></div>
+  </div>
+</div>
+
+
+    
+<script>
+function openArt(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+</script>
+   
+</body>
+</html> 
