@@ -153,7 +153,18 @@ a:active {
   color: white;
 }
   */
-  
+  .close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
 </style>
 </head>
 <body>
@@ -171,8 +182,8 @@ a:active {
 
 <div id="All" class="tabcontent">
   <div id="gallery-container" class="grid-container">
-    <div class="grid-item"><a href="/img/7.JPG" data-lightbox="gallery"><img src="/img/7.JPG"></a></div>
-    <div class="grid-item"><a href="/img/6.jpg" data-lightbox="gallery"><img src="/img/6.jpg"></a></div>
+    <div class="grid-item"><a href="/img/7.JPG" data-lightbox="gallery"><img src="/img/7.JPG"><button class="close-button">x</button></a></div>
+    <div class="grid-item"><a href="/img/6.jpg" data-lightbox="gallery"><img src="/img/6.jpg"><button class="close-button">x</button></a></div>
     <div class="grid-item"><img src="/img/5.jpg"></div>
     <div class="grid-item"><img src="/img/4.jpg"></div>
     <div class="grid-item"><img src="/img/3.JPEG"></div>
