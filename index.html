@@ -156,7 +156,7 @@ a:active {
 </head>
 <body>
 
-  <h1><a href="https://nenkanuska.com">nenkanuska</a></h1>
+  <h1 id="title"><a href="https://nenkanuska.com">nenkanuska</a></h1>
 
 <div class="tab">
   <button class="tablinks" onclick="openArt(event, 'All')">All</button>
@@ -233,6 +233,12 @@ function openArt(evt, cityName) {
   document.getElementById(cityName).style.display = "block";
   evt.currentTarget.className += " active";
 }
+  
+   // Add an event listener to the h1 element
+  document.getElementById("title").addEventListener("click", function() {
+    // Call the openArt function with the "All" tab
+    openArt(event, "All");
+  });
 </script>
    
 </body>
